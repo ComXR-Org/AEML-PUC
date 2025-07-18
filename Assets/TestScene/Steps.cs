@@ -9,7 +9,7 @@ using UnityEngine.Networking;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.XR.Interaction.Toolkit.Interactables;
+//using UnityEngine.XR.Interaction.Toolkit.Interactables;
 #if UNITY_EDITOR
 #endif
 [System.Serializable]
@@ -1247,7 +1247,7 @@ public class Steps : MonoBehaviour {
 
                 }
                 //cmpStep.vr_Interactable.transform.GetChild(0).gameObject.SetActive(true);
-                cmpStep.vr_Interactable.GetComponent<XRSimpleInteractable>().enabled=true;
+                cmpStep.vr_Interactable.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable>().enabled=true;
             }
 
             if (cmpStep.isToolAttached == true)
@@ -1316,7 +1316,7 @@ public class Steps : MonoBehaviour {
 
 
 
-        step.vr_Interactable.GetComponent<XRSimpleInteractable>().enabled = false;
+        step.vr_Interactable.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable>().enabled = false;
 
        // stepsMgr.nextBtn.SetActive(true);
         stepsMgr.nextBtn.GetComponent<Button>().interactable = true;
